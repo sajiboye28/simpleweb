@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+      integrity="sha384-5sKjDY4oJUj+p0c/Gv5FP5s3m0n8KANM8GpB5mc6NDb9l9wa8kRdBr7I5qy2aBwE"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        padding: 20px;
+      }
+      .header {
+        border-radius: 70px;
+        background: #e0e0e0;
+        box-shadow: inset 24px 24px 48px #747474, inset -24px -24px 48px #ffffff;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 9%,
+          rgba(0, 212, 255, 1) 55%
+        );
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header h1 {
+        margin: 0;
+        margin-left: 100px;
+      }
+      .nav {
+        overflow: hidden;
+        font-size: 20px;
+      }
+      .nav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .nav a:hover {
+        background-color: #111;
+      }
+      .main {
+        padding: 20px;
+        text-align: center;
+      }
+      .main h2 {
+        margin-top: 0;
+      }
+      .profile-image {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        -webkit-animation: bounce-in-fwd 1.1s both;
+        animation: bounce-in-fwd 1.1s both;
+      }
+      @-webkit-keyframes bounce-in-fwd {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+          opacity: 0;
+        }
+        38% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+          opacity: 1;
+        }
+        55% {
+          -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+        }
+        72% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+        }
+        81% {
+          -webkit-transform: scale(0.84);
+          transform: scale(0.84);
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+        }
+        89% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+        }
+        95% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+        }
+      }
+      @keyframes bounce-in-fwd {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+          opacity: 0;
+        }
+        38% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+          opacity: 1;
+        }
+        55% {
+          -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+        }
+        72% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+        }
+        81% {
+          -webkit-transform: scale(0.84);
+          transform: scale(0.84);
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+        }
+        89% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+        }
+        95% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+          -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+        }
+      }
+
+      .content {
+        display: flex;
+        border-radius: 70px;
+        background: #e0e0e0;
+        box-shadow: inset 24px 24px 48px #747474, inset -24px -24px 48px #ffffff;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 9%,
+          rgba(0, 212, 255, 1) 55%
+        );
+        justify-content: center;
+        padding: 100px 50px;
+        margin-top: 20px;
+      }
+      .content-text {
+        flex: 1;
+        text-align: left;
+        padding: 0 20px;
+      }
+      .content-text h2 {
+        margin: 0 0 10px;
+      }
+      .copi {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-top: 50px;
+      }
+      .services {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .service {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.3),
+          0px 15px 12px 0px rgba(0, 0, 0, 0.22);
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 9%,
+          rgba(0, 212, 255, 1) 55%
+        );
+        border: 1px solid #e7e7e7;
+        border-radius: 37% 63% 16% 84% / 73% 16% 84% 27%;
+      }
+      .element {
+        width: 250px;
+        height: 250px;
+        background-color: rgba(255, 255, 255, 1);
+        color: #000;
+        border-radius: 10px;
+        box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.3),
+          0px 15px 12px 0px rgba(0, 0, 0, 0.22);
+      }
+      footer {
+        border-radius: 70px;
+        background: #e0e0e0;
+        box-shadow: inset 24px 24px 48px #747474, inset -24px -24px 48px #ffffff;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 9%,
+          rgba(0, 212, 255, 1) 55%
+        );
+        border-top: 1px solid #e7e7e7;
+        text-align: center;
+        padding: 20px;
+      }
+      .social-media {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .social-media a {
+        color: rgb(255, 255, 255);
+      }
+      .social-media a:hover {
+        color: #007bff;
+      }
+      .social-media i {
+        font-size: 20px;
+        padding: 0 10px;
+      }
+      .linkedin {
+        color: #0077b5;
+      }
+      .facebook {
+        color: #1877f2;
+      }
+      .twitter {
+        color: #1da1f2;
+      }
+      .instagram {
+        color: #e4405f;
+      }
+      h2 {
+        color: #ffffff;
+      }
+      h4 {
+        color: #ffffff;
+      }
+      p {
+        color: #ffffff;
+      }
+      .flipswitch {
+        position: relative;
+        width: 86px;
+      }
+      .flipswitch input[type="checkbox"] {
+        display: none;
+      }
+      .flipswitch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 1px solid #999999;
+        border-radius: 8px;
+      }
+      .flipswitch-inner {
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+      }
+      .flipswitch-inner:before,
+      .flipswitch-inner:after {
+        float: left;
+        width: 50%;
+        height: 24px;
+        padding: 0;
+        line-height: 24px;
+        font-size: 18px;
+        color: white;
+        font-family: Trebuchet, Arial, sans-serif;
+        font-weight: bold;
+        box-sizing: border-box;
+      }
+      .flipswitch-inner:before {
+        content: "ON";
+        padding-left: 12px;
+        background-color: #256799;
+        color: #ffffff;
+      }
+      .flipswitch-inner:after {
+        content: "OFF";
+        padding-right: 12px;
+        background-color: #ff0000;
+        color: #ffffff;
+        text-align: right;
+      }
+      .flipswitch-switch {
+        width: 31px;
+        margin: -3.5px;
+        background: #ffffff;
+        border: 1px solid #999999;
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 59px;
+        transition: all 0.3s ease-in 0s;
+      }
+      .flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+        margin-left: 0;
+      }
+      .flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+        right: 0;
+      }
+      body.dark-mode {
+        background-color: #111;
+        color: #ffffff;
+      }
+      /* SITE LOGO */
+      .shake-lr {
+        -webkit-animation: shake-lr 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+          both;
+        animation: shake-lr 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+      }
+      @-webkit-keyframes shake-lr {
+        0%,
+        100% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+        }
+        10% {
+          -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+        }
+        20%,
+        40%,
+        60% {
+          -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+        }
+        30%,
+        50%,
+        70% {
+          -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+        }
+        80% {
+          -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+        }
+        90% {
+          -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+        }
+      }
+      @keyframes shake-lr {
+        0%,
+        100% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+        }
+        10% {
+          -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+        }
+        20%,
+        40%,
+        60% {
+          -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+        }
+        30%,
+        50%,
+        70% {
+          -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+        }
+        80% {
+          -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+        }
+        90% {
+          -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="shake-lr">NOLAT</h1>
+      <div class="flipswitch">
+        <input
+          type="checkbox"
+          name="flipswitch"
+          class="flipswitch-cb"
+          id="fs"
+          checked
+        />
+        <label class="flipswitch-label" for="fs">
+          <div class="flipswitch-inner"></div>
+          <div class="flipswitch-switch"></div>
+        </label>
+      </div>
+      <div class="nav">
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#pastprojects">PAST PROJECTS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+    <div class="main">
+      <img class="profile-image" src="1.jpg" alt="" srcset="" />
+      <br /><br />
+      <h2 style="color: #00d4ff">I’m Noah Olatoye</h2>
+      <p style="color: #000000">
+        I’m a software engineer, teacher and speaker <br />
+        from Lagos - Nigeria
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 64 64"
+        >
+          <path fill="#e6e7e8" d="M22 10h20v44H22z" />
+          <path
+            fill="#128807"
+            d="M10 10C3.373 10 0 14.925 0 21v22c0 6.075 3.373 11 10 11h12V10H10zm44 0H42v44h12c6.627 0 10-4.925 10-11V21c0-6.075-3.373-11-10-11"
+          />
+        </svg>
+      </p>
+    </div>
+    <div class="content">
+      <div class="content-text">
+        <h2>Designing With Passion While<br />Exploring The World</h2>
+        <br />
+        <p>
+          With my advanced professional certification in Design and statistics,
+          I<br />
+          am motivated and teamwork-oriented with notable experience in <br />
+          comprehensive reporting mechanism for both experienced and <br />
+          inexperienced professionals.
+        </p>
+      </div>
+      <div class="content-text">
+        <h2>Any Type of Query <br />& Discussion.</h2>
+        <br />
+        <br />
+        <h2>
+          Prompt me <br /><br />
+          nolatoye@instincthub.com
+        </h2>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="copi">
+      <div>
+        <h2 style="color: #07278d; margin-left: 100px">
+          Services you'll get from me!
+        </h2>
+      </div>
+      <div class="services">
+        <div class="service">
+          <h4>UX/UI Design</h4>
+          <br />
+          <p>
+            I've worked with teams of different sizes to study user behavior and
+            use empathy to create the best experiences.
+          </p>
+        </div>
+        <div class="service">
+          <h4>Web Design</h4>
+          <br />
+          <p>
+            I've worked with teams of different sizes to study user behavior and
+            use empathy to create the best experiences.
+          </p>
+        </div>
+        <div class="service">
+          <h4>Instructor</h4>
+          <br />
+          <p>
+            I've worked with teams of different sizes to study user behavior and
+            use empathy to create the best experiences.
+          </p>
+          <p>lATONA</p>
+        </div>
+        <br />
+        <br />
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer style="color: #ffffff">
+      Prompt me at: <br /><br /><b style="font-size: 20px; font-weight: bold"
+        >nolatoye@instincthub.com</b
+      >
+      <div class="social-media">
+        <a href="https://linkedin.com/" target="_blank" class="linkedin">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://facebook.com/" target="_blank" class="facebook">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="twitter">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank" class="instagram">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+      <small style="font-size: 16px; font-weight: bold">
+        ©InstinstHub 2023.
+      </small>
+    </footer>
+    <script>
+      const flipSwitch = document.querySelector(".flipswitch-cb");
+      const body = document.querySelector("body");
+      const textElement = document.querySelector(".main p");
+
+      flipSwitch.addEventListener("change", () => {
+        if (flipSwitch.checked) {
+          body.classList.remove("dark-mode");
+        } else {
+          body.classList.add("dark-mode");
+        }
+      });
+      flipSwitch.addEventListener("change", () => {
+        if (flipSwitch.checked) {
+          body.classList.remove("dark-mode");
+          textElement.style.color = "#000000";
+        } else {
+          body.classList.add("dark-mode");
+          textElement.style.color = "#ffffff";
+        }
+      });
+    </script>
+  </body>
+</html>
